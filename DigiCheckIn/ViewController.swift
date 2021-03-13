@@ -20,6 +20,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
         lastNameInput.delegate = self
         ageInput.delegate = self
         heightInput.delegate = self
+        healthCardInput.delegate = self
+        weightInput.delegate = self
+        
         
         // METHOD WHICH ADDS THE UI AND SETUPS CONSTRAINTS
         setupUI()
@@ -50,7 +53,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        
         
         // BACKDROP IS ADDED FIRST SO THAT IT LAYS BEHIND THE INPUT
         view.addSubview(firstNameBackdrop)
@@ -110,6 +112,35 @@ class ViewController: UIViewController,UITextFieldDelegate {
         heightInput.heightAnchor.constraint(equalToConstant: 50).isActive = true
         heightInput.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: view.frame.width/12).isActive = true
         heightInput.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width/12).isActive = true
+        
+        view.addSubview(weightBackdrop)
+        weightBackdrop.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        weightBackdrop.topAnchor.constraint(equalTo: firstNameBackdrop.bottomAnchor, constant: 25).isActive = true
+        weightBackdrop.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        weightBackdrop.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: view.frame.width/18).isActive = true
+        weightBackdrop.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width/18).isActive = true
+        
+        view.addSubview(weightInput)
+        weightInput.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        weightInput.topAnchor.constraint(equalTo: firstNameBackdrop.bottomAnchor, constant: 25).isActive = true
+        weightInput.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        weightInput.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: view.frame.width/12).isActive = true
+        weightInput.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width/12).isActive = true
+        
+        view.addSubview(healthCardBackdrop)
+        healthCardBackdrop.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        healthCardBackdrop.topAnchor.constraint(equalTo: firstNameBackdrop.bottomAnchor, constant: 25).isActive = true
+        healthCardInput.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        healthCardInput.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: view.frame.width/18).isActive = true
+        healthCardInput.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width/18).isActive = true
+        
+        view.addSubview(healthCardInput)
+        healthCardInput.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        healthCardInput.topAnchor.constraint(equalTo: firstNameBackdrop.bottomAnchor, constant: 25).isActive = true
+        healthCardInput.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        healthCardInput.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: view.frame.width/12).isActive = true
+        healthCardInput.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width/12).isActive = true
+
         
     
     }
@@ -248,4 +279,67 @@ class ViewController: UIViewController,UITextFieldDelegate {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    // WEIGHT UI
+    
+    let weightInput:UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .clear
+        textField.textColor = .black
+        textField.layer.borderColor = UIColor.clear.cgColor
+        textField.layer.cornerRadius = 0
+        textField.layer.borderWidth = 0
+        textField.adjustsFontSizeToFitWidth = true
+        textField.minimumFontSize = 14
+        textField.textAlignment = .left
+        textField.contentVerticalAlignment = .center
+        textField.returnKeyType = .done
+        textField.clearButtonMode = UITextField.ViewMode.whileEditing
+        textField.attributedPlaceholder = NSAttributedString(string: "Weight", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.black])
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocorrectionType = .yes
+        textField.font = UIFont.systemFont(ofSize: 18)
+        return textField
+    }()
+    
+    let weightBackdrop:UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 10
+        view.layer.borderColor = UIColor.black.cgColor
+        view.backgroundColor = UIColor(red: 128, green: 128, blue: 128, alpha: 1)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    // HEALTHCARD UI
+    
+    let healthCardInput:UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .clear
+        textField.textColor = .black
+        textField.layer.borderColor = UIColor.clear.cgColor
+        textField.layer.cornerRadius = 0
+        textField.layer.borderWidth = 0
+        textField.adjustsFontSizeToFitWidth = true
+        textField.minimumFontSize = 14
+        textField.textAlignment = .left
+        textField.contentVerticalAlignment = .center
+        textField.returnKeyType = .done
+        textField.clearButtonMode = UITextField.ViewMode.whileEditing
+        textField.attributedPlaceholder = NSAttributedString(string: "Health Card Number", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.black])
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocorrectionType = .yes
+        textField.font = UIFont.systemFont(ofSize: 18)
+        return textField
+    }()
+    
+    let healthCardBackdrop:UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 10
+        view.layer.borderColor = UIColor.black.cgColor
+        view.backgroundColor = UIColor(red: 128, green: 128, blue: 128, alpha: 1)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
 }
