@@ -13,6 +13,7 @@
 		DAB4EFA525FC598100AB6E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB4EFA325FC598100AB6E11 /* Main.storyboard */; };
 		DAB4EFA725FC598400AB6E11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB4EFA625FC598400AB6E11 /* Assets.xcassets */; };
 		DAB4EFAA25FC598400AB6E11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB4EFA825FC598400AB6E11 /* LaunchScreen.storyboard */; };
+		DAB4EFB625FCF8D300AB6E11 /* UIAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4EFB525FCF8D300AB6E11 /* UIAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DAB4EFA625FC598400AB6E11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAB4EFA925FC598400AB6E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAB4EFAB25FC598400AB6E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB4EFB525FCF8D300AB6E11 /* UIAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		DAB4EF9C25FC598100AB6E11 /* DigiCheckIn */ = {
 			isa = PBXGroup;
 			children = (
+				DAB4EFB425FCF8C800AB6E11 /* Resources */,
 				DAB4EF9D25FC598100AB6E11 /* AppDelegate.swift */,
 				DAB4EF9F25FC598100AB6E11 /* SceneDelegate.swift */,
 				DAB4EFA125FC598100AB6E11 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				DAB4EFAB25FC598400AB6E11 /* Info.plist */,
 			);
 			path = DigiCheckIn;
+			sourceTree = "<group>";
+		};
+		DAB4EFB425FCF8C800AB6E11 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAB4EFB525FCF8D300AB6E11 /* UIAttributes.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				DAB4EFA225FC598100AB6E11 /* ViewController.swift in Sources */,
 				DAB4EF9E25FC598100AB6E11 /* AppDelegate.swift in Sources */,
+				DAB4EFB625FCF8D300AB6E11 /* UIAttributes.swift in Sources */,
 				DAB4EFA025FC598100AB6E11 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
