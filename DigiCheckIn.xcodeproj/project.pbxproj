@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		888C575B25FD598A00D9FEBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888C575A25FD598A00D9FEBD /* LoginViewController.swift */; };
 		DAB4EF9E25FC598100AB6E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4EF9D25FC598100AB6E11 /* AppDelegate.swift */; };
 		DAB4EFA025FC598100AB6E11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4EF9F25FC598100AB6E11 /* SceneDelegate.swift */; };
 		DAB4EFA225FC598100AB6E11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4EFA125FC598100AB6E11 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		888C575A25FD598A00D9FEBD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DAB4EF9A25FC598100AB6E11 /* DigiCheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiCheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB4EF9D25FC598100AB6E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAB4EF9F25FC598100AB6E11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				DAB4EFA625FC598400AB6E11 /* Assets.xcassets */,
 				DAB4EFA825FC598400AB6E11 /* LaunchScreen.storyboard */,
 				DAB4EFAB25FC598400AB6E11 /* Info.plist */,
+				888C575A25FD598A00D9FEBD /* LoginViewController.swift */,
 			);
 			path = DigiCheckIn;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				DAB4EFA225FC598100AB6E11 /* ViewController.swift in Sources */,
 				DAB4EF9E25FC598100AB6E11 /* AppDelegate.swift in Sources */,
 				DAB4EFB625FCF8D300AB6E11 /* UIAttributes.swift in Sources */,
+				888C575B25FD598A00D9FEBD /* LoginViewController.swift in Sources */,
 				DAB4EFA025FC598100AB6E11 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
