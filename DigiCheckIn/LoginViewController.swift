@@ -9,24 +9,18 @@ import UIKit
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+    
         usernameInput.delegate = self
         passwordInput.delegate = self
-        
-       
-        
         setupUI()
-        
-        
     }
     
-    @objc func attemptLogin(){
-        self.dismiss(animated: true, completion: nil)
+    // Method which shows the signup page
+    @objc func signupPage() {
+        present(ViewController(), animated: true, completion: nil)
     }
     
     //MARK: textFieldShouldReturn
@@ -40,19 +34,22 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         view.backgroundColor = UIAttributes.utilityWhite
         
+        // Title Constraints
         view.addSubview(titleLabel)
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: view.frame.height/8).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        titleLabel.heightAnchor.constraint(equalToConstant: 55).isActive = true
         
+        // Username Input Constraints
         view.addSubview(loginBackdropView)
         loginBackdropView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginBackdropView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50).isActive = true
         loginBackdropView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         loginBackdropView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: view.frame.width/6).isActive = true
         loginBackdropView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width/6).isActive = true
+        
         
         view.addSubview(usernameInput)
         usernameInput.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -61,6 +58,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         usernameInput.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: view.frame.width/5.5).isActive = true
         usernameInput.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width/5.5).isActive = true
         
+        // Password constraints
         view.addSubview(passwordBackdropView)
         passwordBackdropView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         passwordBackdropView.topAnchor.constraint(equalTo: usernameInput.bottomAnchor, constant: 15).isActive = true
@@ -75,6 +73,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         passwordInput.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: view.frame.width/5.5).isActive = true
         passwordInput.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width/5.5).isActive = true
         
+        // Login button constraints
         view.addSubview(loginButton)
         loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginButton.topAnchor.constraint(equalTo: passwordInput.bottomAnchor, constant: 15).isActive = true
@@ -82,7 +81,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: view.frame.width/5.5).isActive = true
         loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width/5.5).isActive = true
         
-        
+        // Signup button constraints
         view.addSubview(signupButton)
         signupButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         signupButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -view.frame.height/24).isActive = true
@@ -142,7 +141,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         return textField
     }()
     
-    
     let passwordBackdropView:UIView = {
         let view = UIView()
         view.layer.cornerRadius = 10
@@ -191,9 +189,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         return button
     }()
     
-    @objc func signupPage() {
-        present(ViewController(), animated: true, completion: nil)
-    }
+    
 
     
 }
